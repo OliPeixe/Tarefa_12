@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Par ou Impar</title>
+</head>
+<body>
+    <center>
+        <label for="n">Escreve um número inteiro:</label>
+        <input id="n" type="number" step="1">
+        <button onclick="compare()">Par ou Impar?</button>
+        <p id="text"></p>
+    </center>
+</body>
+<script>
+    function compare(){
+        var n
+        n = parseInt(document.getElementById("n").value)
+        if (n%2==0){
+            document.getElementById("text").innerText="O número é par."
+            document.body.style.backgroundColor="lightblue"
+        } else if (n%2==1)  {
+            document.getElementById("text").innerText="O número é impar."
+            document.body.style.backgroundColor="orange"
+        }
+    }
+</script>
+</html>
